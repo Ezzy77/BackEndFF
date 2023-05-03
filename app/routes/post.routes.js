@@ -3,5 +3,5 @@ const auth = require("../lib/middleware")
 module.exports = function(app){
     app.route("/posts")
         .get(posts.getAll)
-        .post(auth.isAuthenticated, posts.create);
+        .post( posts.create);
 }
